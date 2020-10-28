@@ -1,31 +1,26 @@
 package kr.co.daum;
 
 public class Friend {
-	private String id;
-	private String job;
+	private Bow bow;
 	
-	public Friend(String id, String job) {
-		super();
-		this.id = id;
-		this.job = job;
-		System.out.println(id+job);
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getJob() {
-		return job;
-	}
-
-	public void setJob(String job) {
-		this.job = job;
+	public String toString() {
+		return "Hero";
 	}
 	
+	public void attackBow(Monster mon, Friend name) {
+		bow.attack(mon, name);
+	}
+
+	public Friend(Bow bow) {
+		this.bow = bow;
+	}
+
+	public Bow getBow() {
+		return bow;
+	}
+
+	public void setBow(Bow bow) {
+		this.bow = bow;
+	}
 
 }
