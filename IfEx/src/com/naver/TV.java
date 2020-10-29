@@ -47,6 +47,7 @@ public class TV {
 	}
 	
 	public void volUp() {
+		// 만약 파워가 false라면 이 메서드의 return; 밑은 실행하지 않는다.
 		if(!power) {
 			return;
 		}
@@ -58,7 +59,8 @@ public class TV {
 	}
 	
 	public void volDown() {
-		if(!power) {
+		// 만약 파워가 true라면 이 볼륨을 낮춘다. 0보다 낮아질 수는 없다.
+		if(power) {
 			--vol;
 			if(vol<0) {
 			vol = 0;

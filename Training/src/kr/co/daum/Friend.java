@@ -3,6 +3,7 @@ package kr.co.daum;
 public class Friend {
 	private Bow bow;
 	
+	
 	public String toString() {
 		return "Hero";
 	}

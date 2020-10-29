@@ -1,5 +1,6 @@
 package kr.co.ezen;
 
+import com.naver.Person;
 import com.naver.TV;
 import com.naver.Test;
 
@@ -27,12 +28,36 @@ public class MainEx {
 		System.out.println(tv1.getVol());
 		tv1.volUp();
 		System.out.println(tv1.getVol());
-		tv1.powerOff();
 		tv1.volUp();
 		System.out.println(tv1.getVol());
 		tv1.volUp();
 		System.out.println(tv1.getVol());
 		tv1.volUp();
+		System.out.println(tv1.getVol());
+		tv1.volDown();
+		System.out.println(tv1.getVol());
+		
+		System.out.println("=====================================");
+		
+		Person kim = new Person(tv1);
+		// kim이 tv를 켠다.
+		kim.tvOn();
+		//tv를 끕니다.
+		kim.tvOff();
+		
+		// kim이 tv를 켭니다.
+		kim.tvOn();
+		
+		// kim의 채널을 +1 시키시오.
+		kim.chUp();
+		System.out.println(tv1.getCh());
+		
+		// kim의 볼륨을 -1 시키시오.
+		kim.volDown();
+		System.out.println(tv1.getCh());
+		
+		//kim의 볼륨을 50으로 설정하시오.
+		kim.getTv1().setVol(50);
 		System.out.println(tv1.getVol());
 	}
 
