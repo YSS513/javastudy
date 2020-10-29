@@ -1,16 +1,19 @@
 package kr.co.daum;
 
 public class Bow {
-	private int atk;
+	private int dmg;
 	
 	public Bow() {
-		atk = 50;
+		dmg = 110;
 	}
 
 	public void attack(Monster mon, Friend name) {
-		if(atk>=mon.getAcc()) {
-		System.out.println(name+"가 "+"활로 "+mon+"를 공격합니다.");
-		}else if(atk<=mon.getAcc()){
+		int u = mon.getAcc();
+		int u2 = dmg-u;
+		int hp = mon.getHp();
+		if(dmg>u) {
+		System.out.println(name+"가 "+"활로 "+mon+"를 공격하여 "+u2+"의 데미지를 입혔다!");
+		}else if(dmg<=u){
 			System.out.println("Miss");
 		}
 	}
