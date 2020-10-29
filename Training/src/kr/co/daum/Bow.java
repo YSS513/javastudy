@@ -10,6 +10,8 @@ public class Bow {
 	public void attack(Monster mon, Friend name) {
 		if(atk>=mon.getAcc()) {
 		System.out.println(name+"가 "+"활로 "+mon+"를 공격합니다.");
+		}else if(atk<=mon.getAcc()){
+			System.out.println("Miss");
 		}
 	}
 	
