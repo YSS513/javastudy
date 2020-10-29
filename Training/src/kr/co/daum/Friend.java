@@ -11,10 +11,6 @@ public class Friend {
 		bow.attack(mon, name);
 	}
 
-	public Friend(Bow bow) {
-		this.bow = bow;
-	}
-
 	public Bow getBow() {
 		return bow;
 	}
