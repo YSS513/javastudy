@@ -2,6 +2,42 @@ package com.naver;
 
 public class Test {
 	
+	
+	public void me8() {
+		for (int i = 0; i < 10; i++) {
+			if(i % 5 == 0)
+				continue;
+			System.out.println(i);
+		}
+	}
+	
+	public void me71() {
+		for (int i = 10; i >= 0; i--) {
+			System.out.println("외부 for문 시작");
+			
+			for (int j = 100; j < 105 ; j++) {
+				if (i % 2 == 0) {
+					break;
+				}
+				System.out.println(i+" : "+j);
+			}
+			
+			System.out.println("외부 for문 종료");
+		}
+		
+		System.out.println("브레이크 테스트");
+	}
+	
+	public void me7(int num) {
+		for (int i = 0; i < 10; i++) {
+			System.out.println(i);
+			if (num % 3 == 0) {
+				System.out.println("3의 배수가 검출되었습니다. 가장 가까운 반복을 중단합니다.");
+				break;
+			}
+		}
+	}
+	
 	public void halfDiamond() {
 		int n = 10;
 		
@@ -53,6 +89,7 @@ public class Test {
 	}
 	
 	public void me5() {
+//		별 1개씩, 10번 반복하여 같은줄에 나오게하기
 		for (int i = 0; i < 10; i++) {
 			System.out.print("*");
 		}
