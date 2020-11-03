@@ -11,6 +11,8 @@ public class MainEx {
 		
 		System.out.println("======================");
 		
+		t1.me4();
+		
 	}
 
 }
