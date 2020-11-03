@@ -2,10 +2,10 @@ package com.naver;
 
 public class Training {
 	
-	public void me1() {
-		// 배열의 크기가 10이고, 피보나치수열을 이용하여 값을 넣어주고 출력한다.
+	public void me1(int n) {
+		// 배열의 크기는 외부에서 받는 n이고, 피보나치수열을 이용하여 값을 넣어주고 출력한다.
 		// 단, 인덱스 또는 요소값이 홀수인 경우 출력하지 않는다.
-		int[] pibo = new int[10];
+		int[] pibo = new int[n];
 		
 		int a = 1;
 		int b = 1;
