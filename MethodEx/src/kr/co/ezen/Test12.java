@@ -1,22 +1,21 @@
 package kr.co.ezen;
 
 public class Test12 {
-	
+
 	int a;
-	boolean b= true;
+	boolean b = true;
 	MethodTest mt1;
 	MethodTest mt2 = new MethodTest();
-	
+
 	public Test12() {
 	}
-	
+
 	public void sayHello() {
 		System.out.println("Hello");
 	}
-	
+
 	public void printScore(String name, int s) {
-		System.out.println(name+" "+s+"Á¡");
+		System.out.println(name + " " + s + "Á¡");
 	}
-	
-	
+
 }

@@ -8,9 +8,9 @@ public class Person {
 	private String job;
 	private Dog dog;
 	private Car car;
-	
+
 	public Person() {
-		
+
 	}
 
 	public Person(String ssn, String name, int age, String address, String job, Dog dog, Car car) {
@@ -78,7 +78,5 @@ public class Person {
 	public void setCar(Car car) {
 		this.car = car;
 	}
-	
-	
 
 }

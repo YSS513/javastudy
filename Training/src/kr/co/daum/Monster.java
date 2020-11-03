@@ -3,7 +3,7 @@ package kr.co.daum;
 public class Monster {
 	private int acc;
 	private int hp;
-	
+
 	public Monster() {
 		hp = 1000;
 		acc = 100;
@@ -35,9 +35,5 @@ public class Monster {
 		this.acc = acc;
 		this.hp = hp;
 	}
-	
-	
-	
-	
 
 }

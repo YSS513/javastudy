@@ -1,22 +1,22 @@
 package com.naver;
 
 public class Hero {
-	
+
 	private Bow bow;
 	private Sword sword;
 	private Spear spear;
-	
+
 	public void attackBow(Monster mon) {
 		bow.attack(mon);
 	}
+
 	public void attackSword(Monster mon) {
 		sword.attack(mon);
 	}
+
 	public void attackSpear(Monster mon) {
 		spear.attack(mon);
 	}
-
-
 
 	public Hero(Bow bow, Sword sword, Spear spear) {
 		this.spear = spear;
@@ -47,5 +47,5 @@ public class Hero {
 	public void setSpear(Spear spear) {
 		this.spear = spear;
 	}
-	
+
 }

@@ -107,7 +107,6 @@ public class MainEx {
 		System.out.println("good morning");
 		System.out.println("good morning");
 		System.out.println("good morning");
-		
 
 	}
 }

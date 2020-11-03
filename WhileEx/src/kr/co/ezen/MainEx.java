@@ -6,13 +6,13 @@ public class MainEx {
 
 	public static void main(String[] args) {
 		Test t1 = new Test();
-		
+
 		t1.printPibo(5);
-		
+
 		System.out.println("======================");
-		
+
 		t1.me4();
-		
+
 	}
 
 }

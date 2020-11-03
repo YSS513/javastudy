@@ -6,11 +6,10 @@ public class TV {
 	private String model;
 	private String company;
 	private boolean power;
-	
-	
+
 	public TV() {
 	}
-	
+
 	public TV(int ch, int vol, String model, String company, boolean power) {
 		super();
 		this.ch = ch;
@@ -19,92 +18,46 @@ public class TV {
 		this.company = company;
 		this.power = power;
 	}
-	
+
 	public void chUp() {
-		if(!power) {
+		if (!power) {
 			return;
 		}
 		++ch;
-		if(ch>999) {
+		if (ch > 999) {
 			ch = 0;
 		}
 	}
-	
+
 	public void chDown() {
-		if(!power) {
+		if (!power) {
 			return;
 		}
 		--ch;
 	}
-	
+
 	public void volUp() {
-		if(!power) {
+		if (!power) {
 			return;
 		}
 		++vol;
 	}
-	
+
 	public void volDown() {
-		if(!power) {
+		if (!power) {
 			return;
 		}
 		--vol;
 	}
-	
+
 	public void powerOn() {
 		power = true;
 	}
-	
+
 	public void powerOff() {
 		power = false;
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public int getCh() {
 		return ch;
 	}
@@ -144,9 +97,5 @@ public class TV {
 	public void setPower(boolean power) {
 		this.power = power;
 	}
-	
-	
-	
-	
 
 }

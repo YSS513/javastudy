@@ -2,7 +2,7 @@ package com.naver;
 
 public class Dog {
 	private String name;
-	
+
 	public Dog() {
 		// TODO Auto-generated constructor stub
 	}
@@ -19,7 +19,5 @@ public class Dog {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
 
 }

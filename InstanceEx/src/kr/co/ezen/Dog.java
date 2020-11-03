@@ -6,17 +6,16 @@ public class Dog {
 	private int did;
 	private String name;
 	private Date birth;
-	
+
 	public Dog(int did, String name, Date birth) {
 		super();
 		this.did = did;
 		this.name = name;
 		this.birth = birth;
 	}
-	
-	
+
 	public String sleep(String where) {
-		String msg = where+"ø°º≠ ¿‹¥Ÿ";
+		String msg = where + "ø°º≠ ¿‹¥Ÿ";
 		return msg;
 	}
 
@@ -43,8 +42,5 @@ public class Dog {
 	public void setBirth(java.util.Date birth) {
 		this.birth = birth;
 	}
-	
-	
-	
 
 }

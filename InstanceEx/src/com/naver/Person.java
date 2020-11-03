@@ -7,7 +7,7 @@ public class Person {
 	private String name;
 	private Dog happy;
 	private Car K7;
-	
+
 	public Person(String id, String name, Dog happy, Car k7) {
 		super();
 		this.id = id;
@@ -15,7 +15,6 @@ public class Person {
 		this.happy = happy;
 		K7 = k7;
 	}
-	
 
 	public String getId() {
 		return id;
@@ -48,21 +47,18 @@ public class Person {
 	public void setK7(Car k7) {
 		K7 = k7;
 	}
-	
+
 	public void sleep(String where) {
 		String a = happy.getName();
-		System.out.println(a+"를 "+where+"에서 재운다.");
+		System.out.println(a + "를 " + where + "에서 재운다.");
 	}
-	
+
 	public void run(int speed) {
 		System.out.println(K7.run(speed));
 	}
-	
+
 	public void printCarPrice() {
 		System.out.println(K7.showMePrice());
 	}
-	
-	
-	
 
 }
