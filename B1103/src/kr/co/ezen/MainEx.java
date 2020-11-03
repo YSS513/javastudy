@@ -2,11 +2,13 @@ package kr.co.ezen;
 
 import com.naver.Dog;
 import com.naver.Test;
+import com.naver.Training;
 
 public class MainEx {
 	
 	public static void main(String[] args) {
 		Test t1 = new Test();
+		Training t2 = new Training();
 		t1.me1();
 		
 		t1.me12(new Dog[2]);
@@ -25,6 +27,11 @@ public class MainEx {
 		System.out.println("===============");
 		
 		t1.me21();
+		
+		System.out.println("===============");
+		
+		t2.me1();
+		
 		
 		
 	}
