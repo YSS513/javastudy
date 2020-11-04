@@ -1,7 +1,44 @@
 package com.naver;
 
 public class Test {
-	private int a;
+	
+	public void me5() {
+		// 가변형 배열
+		int[][] arr = new int[3][];
+		// 0 : 1, 2, 3, 4
+		// 1 : 0, 2, 4
+		// 2 : 1, 3, 5, 7, 9
+		
+		arr[0] = new int[] {1, 2, 3, 4};
+		arr[1] = new int[] {0, 2, 4};
+		arr[2] = new int[] {1, 3, 5, 7, 9};
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				System.out.println(arr[i][j]);
+			}
+		}
+	}
+	
+	public void me4() {
+		int[][] arr = new int[3][10];
+		
+		// 0 : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+		// 1 : 0, 2, 4 ,6, 8, 10, 12, 14, 16, 18
+		// 2 : 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				if (i == 0) {
+					arr[i][j] = i+1;
+				} else if (i == 1) {
+					arr[i][j] = i*2;
+				} else if (i == 2) {
+					arr[i][j] = i*2+1;
+				} 
+			}
+		}
+	}
 	
 	public void me3() {
 		int[][] arr1 = {
