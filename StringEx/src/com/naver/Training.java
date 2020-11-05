@@ -156,4 +156,20 @@ public class Training {
 			System.out.println(tArr[j]);
 		}
 	}
+	
+	public void Train10() {
+		String msg = "암기#한번더#끝나기#전에#하자";
+		StringTokenizer st = new StringTokenizer(msg, "#");
+		String[] tArr = new String[st.countTokens()];
+		
+		int i = 0;
+		
+		while (st.hasMoreTokens()) {
+			String token = st.nextToken();
+			tArr[i++] = token;
+		}
+		for (int j = 0; j < tArr.length; j++) {
+			System.out.println(tArr[i]);
+		}
+	}
 }
