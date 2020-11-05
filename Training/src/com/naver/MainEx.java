@@ -15,6 +15,10 @@ public class MainEx {
 
 		bow.attack(mon, name);
 		System.out.println(hp);
+		
+		System.out.println("========================");
+		
+		
 
 	}
 

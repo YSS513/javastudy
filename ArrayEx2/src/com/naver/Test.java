@@ -2,6 +2,8 @@ package com.naver;
 
 public class Test {
 	
+	
+	
 	public void me5() {
 		// 가변형 배열
 		int[][] arr = new int[3][];
