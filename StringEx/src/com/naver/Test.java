@@ -3,6 +3,20 @@ package com.naver;
 import java.util.StringTokenizer;
 
 public class Test {
+
+	public void me15() {
+		String msg1 = "hello";
+		String msg2 = "Hello";
+		String msg3 = "HELLO";
+
+		// .toUpperCase(); 모두 대문자로 변경
+		String s1 = msg1.toUpperCase();
+		System.out.println(s1);
+
+		// .toLowerCase(); 모두 소문자로 변경
+		String s2 = msg3.toLowerCase();
+		System.out.println(s2);
+	}
 	
 	public void me14(int age) {
 		// 문자열과 숫자를 + 연산을 사용하지 않고 표현하는 방법

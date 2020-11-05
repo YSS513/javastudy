@@ -40,6 +40,10 @@ public class MainEx {
 		System.out.println("=====================");
 		
 		t1.me14(15);
+		
+		System.out.println("=====================");
+		
+		t1.me15();
 
 	}
 
