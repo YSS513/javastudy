@@ -1,4 +1,4 @@
-package kr.co.daum;
+package com.naver;
 
 public class Weapons {
 
@@ -6,20 +6,20 @@ public class Weapons {
 	private int dmg;
 
 	public Weapons() {
-
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void attack(Monster mon) {
+		int bhp = mon.getHp();
+		int ahp = bhp - dmg;
+		mon.setHp(ahp);
+		System.out.println("몬스터의 HP : " + ahp);
 	}
 
 	public Weapons(String name, int dmg) {
 		super();
 		this.name = name;
 		this.dmg = dmg;
-	}
-
-	public void attack(Monster mon) {
-		int bhp = mon.getHp();
-		int ahp = bhp - dmg;
-		mon.setHp(ahp);
-		System.out.println("Monster의 HP : " + ahp);
 	}
 
 	public String getName() {

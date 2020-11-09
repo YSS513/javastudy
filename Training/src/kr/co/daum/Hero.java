@@ -8,7 +8,7 @@ public class Hero {
 
 	public Hero() {
 		weapons = new Weapons[] { new Sword("검", 10), new Spear("창", 20), new Axe("도끼", 40) };
-		
+
 		w = weapons[0];
 	}
 
@@ -29,6 +29,6 @@ public class Hero {
 		}
 
 		w = weapons[weaponIdx];
-		System.out.println(w + " 로 변경되었습니다.");
+		System.out.println(w + " 으로 변경되었습니다.");
 	}
 }
