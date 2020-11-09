@@ -1,25 +1,16 @@
 package kr.co.daum;
 
 public class Monster {
-	private int acc;
-	private int hp;
+
+	public int hp;
 
 	public Monster() {
-		hp = 1000;
-		acc = 100;
+		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	public String toString() {
-		return "Monster1";
-	}
-
-	public int getAcc() {
-		return acc;
-	}
-
-	public void setAcc(int acc) {
-		this.acc = acc;
+	
+	public Monster(int hp) {
+		super();
+		this.hp = hp;
 	}
 
 	public int getHp() {
@@ -30,10 +21,9 @@ public class Monster {
 		this.hp = hp;
 	}
 
-	public Monster(int acc, int hp) {
-		super();
-		this.acc = acc;
-		this.hp = hp;
+	@Override
+	public String toString() {
+		return "몬스터의 hp: " + hp;
 	}
 
 }

@@ -11,6 +11,12 @@ public class Gun extends Weapon {
 		super(name, dmg);
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public void img() {
+		System.out.println("≈¡≈¡≈¡!");
+		
+	}
 	
 	
 	

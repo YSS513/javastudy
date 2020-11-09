@@ -1,9 +1,8 @@
-package com.naver;
+package kr.co.daum;
 
-public class Sword extends Weapon {
+public class Sword extends Weapons {
 
 	public Sword() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -12,12 +11,4 @@ public class Sword extends Weapon {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void img() {
-		System.out.println("½»»è½»»è");
-		
-	}
-	
-	
-	
 }

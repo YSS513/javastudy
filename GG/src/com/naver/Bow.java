@@ -11,6 +11,11 @@ public class Bow extends Weapon {
 		super(name, dmg);
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public void img() {
+		System.out.println("¼õ¼õ");
+	}
 	
 	
 	
