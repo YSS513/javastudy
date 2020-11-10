@@ -1,25 +1,30 @@
 package com.naver;
 
-public class Weapons {
-	
+public abstract class Weapon implements WeaponSkill {
+
 	private String name;
 	private int dmg;
-	
-	
-	public Weapons() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public void attack(Monster mon) {
-		int bhp = mon.getHp() - dmg;
-		mon.setHp(bhp);
-		System.out.println("몬스터의 HP : "+bhp);
+
+	public Weapon() {
 	}
 
-	public Weapons(String name, int dmg) {
+	public Weapon(int dmg) {
+		super();
+		this.dmg = dmg;
+	}
+
+	public Weapon(String name, int dmg) {
 		super();
 		this.name = name;
 		this.dmg = dmg;
+	}
+
+	public void attack(Monster mon) {
+		img();
+		int bhp = mon.getHp();
+		int ahp = bhp - dmg;
+		mon.setHp(ahp);
+		System.out.println("monster의 HP: " + ahp);
 	}
 
 	public String getName() {
@@ -42,6 +47,4 @@ public class Weapons {
 	public String toString() {
 		return getName();
 	}
-	
-	
 }

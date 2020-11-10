@@ -1,8 +1,9 @@
 package com.naver;
 
-public class Sword extends Weapons{
-	
+public class Sword extends Weapon {
+
 	public Sword() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -10,4 +11,11 @@ public class Sword extends Weapons{
 		super(name, dmg);
 		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public void img() {
+		System.out.println("½»»è½»»è");
+
+	}
+
 }

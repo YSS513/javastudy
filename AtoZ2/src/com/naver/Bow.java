@@ -1,12 +1,12 @@
 package com.naver;
 
-public class Sword extends Weapons{
+public class Bow extends Weapons{
 	
-	public Sword() {
+	public Bow() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Sword(String name, int dmg) {
+	public Bow(String name, int dmg) {
 		super(name, dmg);
 		// TODO Auto-generated constructor stub
 	}
