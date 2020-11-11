@@ -26,11 +26,12 @@ public class Hero {
 
 	public void changeWeapon(int weaponIdx) {
 
-		if (weaponIdx >= weapons.length || weaponIdx < 0) {
-			weaponIdx = weapons.length - 1;
+		try {
+			w = weapons[weaponIdx];
+		} catch (Exception e) {
+			weaponIdx = weapons.length-1;
 		}
-
-		w = weapons[weaponIdx];
+		
 		System.out.println(w + "로 변경되었습니다.");
 	}
 }

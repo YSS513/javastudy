@@ -43,8 +43,7 @@ public class MainEx {
 				System.out.println("무기를 선택하세요.");
 				
 				for (int i = 0; i < weapons.length; i++) {
-					System.out.print(i);
-					System.out.print(": "+weapons[i]+", ");
+					System.out.print(i+": "+weapons[i]+", ");
 				}
 				System.out.println();
 				

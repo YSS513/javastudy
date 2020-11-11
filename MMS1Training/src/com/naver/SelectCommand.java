@@ -2,7 +2,7 @@ package com.naver;
 
 import java.util.Scanner;
 
-public class SelectCommand implements Command{
+public class SelectCommand implements Command {
 
 	@Override
 	public void execute(Scanner sc) {
@@ -10,7 +10,6 @@ public class SelectCommand implements Command{
 			MemberDTO dto = DB.db.get(i);
 			System.out.println(dto);
 		}
-		
 	}
 	
 }

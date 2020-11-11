@@ -14,7 +14,7 @@ public class MainEx {
 		Scanner sc = new Scanner(System.in);
 
 		Command[] coms = { new InsertCommand(), new SelectCommand(), 
-				new DeleteCommand(), new UpdateCommand() };
+							new DeleteCommand(), new UpdateCommand() };
 
 		boolean isOK = true;
 
