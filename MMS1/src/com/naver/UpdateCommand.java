@@ -21,5 +21,10 @@ public class UpdateCommand implements Command{
 		int idx = DB.db.indexOf(dto);
 		DB.db.set(idx, dto);
 	}
+	
+	@Override
+	public String toString() {
+		return "¼öÁ¤";
+	}
 
 }
