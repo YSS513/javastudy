@@ -4,7 +4,8 @@ import com.naver.Test;
 
 public class MainEx {
 	public static void main(String[] args) {
-		Test test = new Test();
-		test.me4();
+		Test t1 = new Test();
+		
 	}
+
 }

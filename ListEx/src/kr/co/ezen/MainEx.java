@@ -16,7 +16,7 @@ public class MainEx {
 		MemberDTO dto = list.get(1);
 		String name = dto.getName();
 		System.out.println(name);
-		System.out.println("<<<<<<<<<<<<<<<<<<<<");
+		System.out.println("###################");
 		t1.me8();
 
 	}

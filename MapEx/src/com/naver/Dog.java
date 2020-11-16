@@ -2,27 +2,19 @@ package com.naver;
 
 import java.io.Serializable;
 
-public class Apple implements Serializable, Comparable<Apple>{
+public class Dog implements Serializable, Comparable<Dog> {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private String id;
-	private String addr;
 	private String name;
-	private int price;
-	
-	public Apple() {
-		// TODO Auto-generated constructor stub
-	}
+	private String master;
+	private int age;
 
-	public Apple(String id, String addr, String name, int price) {
-		super();
-		this.id = id;
-		this.addr = addr;
-		this.name = name;
-		this.price = price;
+	public Dog() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getId() {
@@ -33,14 +25,6 @@ public class Apple implements Serializable, Comparable<Apple>{
 		this.id = id;
 	}
 
-	public String getAddr() {
-		return addr;
-	}
-
-	public void setAddr(String addr) {
-		this.addr = addr;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -49,21 +33,43 @@ public class Apple implements Serializable, Comparable<Apple>{
 		this.name = name;
 	}
 
-	public int getPrice() {
-		return price;
+	public String getMaster() {
+		return master;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setMaster(String master) {
+		this.master = master;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
+	public Dog(String id, String name, String master, int age) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.master = master;
+		this.age = age;
+	}
+
 	@Override
 	public String toString() {
-		return id+" : " + addr + " : " + name;
+		return "Dog [id=" + id + ", name=" + name + "]";
+	}
+
+	@Override
+	public int compareTo(Dog o) {
+		// TODO Auto-generated method stub
+		return this.getId().compareTo(o.getId());
 	}
 
 	@Override
@@ -82,7 +88,7 @@ public class Apple implements Serializable, Comparable<Apple>{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Apple other = (Apple) obj;
+		Dog other = (Dog) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -90,14 +96,5 @@ public class Apple implements Serializable, Comparable<Apple>{
 			return false;
 		return true;
 	}
-
-	@Override
-	public int compareTo(Apple o) {
-		// TODO Auto-generated method stub
-		return this.getId().compareTo(o.getId());
-	}
-	
-	
-	
 
 }

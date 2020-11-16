@@ -44,6 +44,7 @@ public class MainEx {
 				sc.nextLine();
 
 				coms.get(idx).execute(sc);
+				//배열일경우? coms[idx].execute(sc);
 
 			}
 		} catch (Exception e) {
