@@ -26,9 +26,9 @@ public class Test {
 		//3. 그 객체의 age 값을 출력하시오.
 		
 //		list로 한다면?
-//		list = new ArrayList<MemberDTO>(set.size());
-				
 //		List<MemberDTO> list = new ArrayList<MemberDTO>();
+				
+//		list = new ArrayList<MemberDTO>(set.size());
 //		int idx2 = list.indexOf(new MemberDTO("m005", null, 0));
 //		MemberDTO dto = list.get(idx2);
 //		System.out.println(dto.getAge());

@@ -1,9 +1,13 @@
 package com.naver;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+
 
 public class Test {
 	
@@ -97,6 +101,15 @@ public class Test {
 			System.out.println(kia.get(i));
 		}
 		
+		Set<String> set = map.keySet();
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			String key = it.next();
+			List<String> val = map.get(key);
+			
+			System.out.println(key+" : "+val);
+		}
+		
 
 	}
 
@@ -120,6 +133,15 @@ public class Test {
 		name = map.get(2);
 		System.out.println(name);
 		
+		Set<Integer> set = map.keySet();
+		// key 모두 출력하기
+		Iterator<Integer> it = set.iterator();
+		while (it.hasNext()) {
+			Integer key = it.next();
+			String val = map.get(key);
+			
+			System.out.println(key+" "+val);
+		}
 	}
 
 	public void me1() {
@@ -143,5 +165,28 @@ public class Test {
 		
 		int leng = map.get("서울과 부산간의 거리");
 		System.out.println(leng);
+		
+		map.replace("서울과 부산간의 거리", 280);
+		System.out.println(map);
+		
+		Set<String> set = map.keySet();
+		// 1. key를 모두 출력하시오.
+		
+		Iterator<String> it = set.iterator();
+		while (it.hasNext()) {
+			String key = it.next();
+			int val = map.get(key);
+			System.out.println(key+":"+val);
+		}
+		
+		// 2. values()
+		
+		Collection<Integer> vals = map.values();
+		Iterator<Integer> col = vals.iterator();
+		while (col.hasNext()) {
+			Integer val = col.next();
+			System.out.println(val);
+		}
+		
 	}
 }
