@@ -2,25 +2,25 @@ package kr.co.daum;
 
 import java.util.Scanner;
 
-public class InsertCommand implements Command{
+public class UpdateCommand implements Command{
 
 	@Override
 	public void execute(Scanner sc) {
-		System.out.println("id를 입력하세요.");
+		System.out.println("수정할 id를 입력하세요.");
 		String id = sc.nextLine();
-		System.out.println("name을 입력하세요.");
+		System.out.println("새로운 name을 입력하세요.");
 		String name = sc.nextLine();
-		System.out.println("age를 입력하세요.");
+		System.out.println("새로운 age를 입력하세요.");
 		int age = sc.nextInt();
 		
 		MemberDTO dto = new MemberDTO(id, name, age);
-		
-		DB.db.add(dto);
+		int idx = DB.db.indexOf(dto);
+		DB.db.set(idx, dto);
 	}
 
 	@Override
 	public String toString() {
-		return "회원가입";
+		return "수정";
 	}
 	
 }

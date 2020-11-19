@@ -1,13 +1,16 @@
-package kr.co.daum;
+package com.naver;
 
 import java.io.Serializable;
 
-public class MemberDTO implements Serializable{
+public class MemberDTO implements Serializable {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String id;
+	
+	private transient String id;
+	// 다른 곳에 값이 넘어가지 못하게합니다. 직렬화 과정에서 제외함. 보안이 중요할 때 사용 (고객의 비밀번호같은거)
 	private String name;
 	private int age;
 	
@@ -46,6 +49,10 @@ public class MemberDTO implements Serializable{
 		this.age = age;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -73,12 +80,10 @@ public class MemberDTO implements Serializable{
 
 	@Override
 	public String toString() {
-		return getId()
-				+System.getProperty("line.separator")+
-				getName()
-				+System.getProperty("line.separator")+
-				getAge();
+		return "MemberDTO [id=" + id + ", name=" + name + "]";
 	}
+	
+	
 	
 	
 }

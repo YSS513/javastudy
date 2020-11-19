@@ -6,9 +6,60 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
 public class Test {
+	
+	public void me6() {
+		MemberDTO dto = new MemberDTO("m001", "kim", 10);
+
+		OutputStream out = null;
+		ObjectOutputStream oos = null;
+
+		InputStream in = null;
+		ObjectInputStream ois = null;
+
+		try {
+//			out = new FileOutputStream("obj.txt");
+//			oos = new ObjectOutputStream(out);
+//			
+//			oos.writeObject(dto);
+//			System.out.println("::::::::::::::");
+			
+			in = new FileInputStream("obj.txt");
+			ois = new ObjectInputStream(in);
+			
+			Object obj = ois.readObject();
+			if (obj instanceof MemberDTO) {
+				MemberDTO mDTO = (MemberDTO)obj;
+				System.out.println(mDTO.getId());
+				System.out.println(mDTO.getName());
+				System.out.println(mDTO.getAge());
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (oos != null) {
+					oos.close();
+				}
+				if (out != null) {
+					out.close();
+				}
+				if (ois != null) {
+					ois.close();
+				}
+				if (in != null) {
+					in.close();
+				}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
 
 	public void me5() {
 		// me3() ³»¿ë

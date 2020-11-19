@@ -6,8 +6,17 @@ public class SelectCommand implements Command{
 
 	@Override
 	public void execute(Scanner sc) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < DB.db.size(); i++) {
+			MemberDTO dto = DB.db.get(i);
+			
+			System.out.println(dto);
+		}
 		
+	}
+
+	@Override
+	public String toString() {
+		return "회원조회";
 	}
 	
 }
