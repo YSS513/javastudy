@@ -134,3 +134,164 @@ select * from (
 select rownum rnum, name, age FROM
 (select rownum rnum, name, age FROM test order by age asc)
 ) WHERE rnum BETWEEN 2 AND 4
+
+DB에 데이터를 저장한 상태에서 컬럼 하나만을 이용해서 특정 레코드 하나만을 조회하고 싶어.
+--> 기본키 = 주키 = primary key = pk
+
+create table member2(
+id varchar2(6),
+name varchar2(6),
+age number(3)
+)
+
+member2 테이블의 id에 대한 키를 설정하여 중복이 되지 않도록 하기
+alter table member2 add constraint pk_member2_id primary key(id)
+
+기본키를 설정하면, 기본키에 대한 중복을 허용하지 않는다.
++ NOT NULL 제약조건도 추가가 됩니다. (NULL값을 넣을 수 없다는 말)
+unique constraint
+
+insert into member2 values ('m001', 'kim', 30)
+insert into member2 values ('m002', 'kim', 30)
+insert into member2 values ('m003', 'kim', 30)
+insert into member2 values ('m004', 'kim', 30)
+insert into member2 values ('m005', 'kim', 30)
+insert into member2 values ('m006', 'kim', 30)
+insert into member2 values ('m007', 'kim', 30)
+
+insert into member2 (id, name, age)values('m008', 'lee', 44)
+
+commit
+
+select * from member2 where id='m004'
+
+
+select * from member
+
+member테이블의 mid를 기본키로 설정해주기!
+alter table member add constraint pk_member_mid primary key(mid)
+
+하단과 같은 두가지 방법으로 더 간편하게 기본키 설정이 가능하다.
+create table test2(
+id varchar2(6) primary key,
+age number(3)
+)
+
+create table test3(
+id varchar2(6),
+age number(3),
+constraint pk_test3_id primary key(id)
+)
+
+외래키 = foreign key = fk
+
+당신이 좋아하는 음식을 다음 중에서만 고르시오.
+1. 갈비
+2. 떡볶이
+3. 된장찌개
+4. 김치찌개
+
+나는 피자...
+1~4중에서만 선택하라고 했는데, 피자를 선택하다니...
+이런 일이 없도록 해보자.
+
+고용자(부모) 테이블
+
+create table depart(
+edep varchar2(9)
+)
+
+select table depart
+drop table depart
+
+부모테이블의 edep를 기본키로 설정해주고
+alter table depart add constraint pk_depart_edep primary key(edep)
+
+자식테이블의 외래키를 부모테이블의 edep(기본키)를 참조하여 설정해줍니다.
+alter table employee add constraint fk_employee_edep foreign key(edep) references depart(edep)
+
+부모에 데이터를 추가해주면?
+insert into depart values ('인사부')
+insert into depart values ('홍보부')
+insert into depart values ('연구실')
+insert into depart values ('영업부')
+
+위의 자료 외에는 들어갈 수 없습니다!
+
+피고용자(자식) 테이블
+create table employee(
+eid varchar2(6),
+ename varchar2(6),
+edep varchar2(9)
+)
+
+//edep에는 인사부/홍보부/연구실/영업부만 들어갈 수 있음.
+
+INSERT INTO employee (eid, ename, edep) values ('e001', 'kim', '인사부')
+INSERT INTO employee (eid, ename, edep) values ('e002', 'lee', '홍보부')
+INSERT INTO employee (eid, ename, edep) values ('e003', 'park', '연구실')
+INSERT INTO employee (eid, ename, edep) values ('e004', 'choi', '영업부')
+
+하단은 입력되지않음. 부모테이블의 데이터에 '비서실'이 없기때문. 참조무결성 제약조건 위반됨.
+INSERT INTO employee (eid, ename, edep) values ('e005', 'jung', '비서실')
+
+select * from employee
+drop table employee
+
+eid를 pk로 설정하시오.
+alter table employee add constraint pk_employee_eid primary key(eid)
+
+외래키(foreign key=fk)가 되려면, 반드시 다른 테이블의 기본키(=주키=primary key, pk)이어야 합니다.
+
+**작업 순서는 부모테이블생성 > 부모기본키설정 > 자식테이블생성 > 외래키설정 > 부모테이블 데이터입력 > 자식테이블 데이터입력
+**주의사항 : 외래키설정 전에 자식테이블에 데이터가 있으면 오류납니다.
+
+하단은 edep의 값을 입력하지 않아서 null이지만, 외래키에는 들어갑니다.
+insert into employee (eid, ename) values ('e006', 'kim')
+
+select * from employee
+
+
+메뉴, 주문 형식으로 예제 만들어보기!
+
+// 부모 테이블
+create table menu(
+pizza varchar2(30),
+pasta varchar2(30),
+drink varchar2(20)
+)
+select * from menu
+drop table menu
+
+alter table menu add constraint pk_menu_pizza_pasta_drink primary key(pizza, pasta, drink)
+
+// 자식 테이블
+create table ohter(
+id number(10) primary key,
+pizza varchar2(30),
+pasta varchar2(30),
+drink varchar2(20)
+)
+select * from ohter
+drop table ohter
+
+alter table ohter add constraint fk_other_pizza_pasta_drink foreign key(pizza, pasta, drink) references menu(pizza, pasta, drink)
+
+insert into menu values ('불고기피자', '토마토스파게티', '콜라')
+insert into menu values ('치즈피자', '크림스파게티', '사이다')
+insert into menu values ('페퍼로니피자', '로제스파게티', '마운틴듀')
+
+insert into ohter values (1, '불고기피자', '토마토스파게티', '콜라')
+insert into ohter values (2, '치즈피자', '크림스파게티', '사이다')
+insert into ohter values (3, '페퍼로니피자', '로제스파게티', '마운틴듀')
+insert into ohter values (4, '불고기피자', '토마토스파게티', '콜라')
+
+insert into ohter values (5, '불고기피자', '크림스파게티', '사이다')
+
+
+select * from member
+
+
+
+
+
