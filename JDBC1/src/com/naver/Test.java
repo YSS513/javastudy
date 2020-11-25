@@ -50,7 +50,6 @@ public class Test {
 			
 		} catch (Exception e) {
 			System.out.println("prepareStatement 생성 실패");
-			
 			e.printStackTrace();
 		} finally {
 			try {

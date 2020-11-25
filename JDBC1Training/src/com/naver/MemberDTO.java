@@ -13,10 +13,6 @@ public class MemberDTO implements Serializable {
 	private String job;
 	private Date birth;
 
-	public MemberDTO() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public String getMid() {
 		return mid;
 	}
@@ -53,14 +49,6 @@ public class MemberDTO implements Serializable {
 		return serialVersionUID;
 	}
 
-	public MemberDTO(String mid, String name, String job, Date birth) {
-		super();
-		this.mid = mid;
-		this.name = name;
-		this.job = job;
-		this.birth = birth;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -86,12 +74,17 @@ public class MemberDTO implements Serializable {
 		return true;
 	}
 
+	public MemberDTO(String mid, String name, String job, Date birth) {
+		super();
+		this.mid = mid;
+		this.name = name;
+		this.job = job;
+		this.birth = birth;
+	}
+
 	@Override
 	public String toString() {
 		return "MemberDTO [mid=" + mid + ", name=" + name + ", job=" + job + ", birth=" + birth + "]";
 	}
 
-	
-	
-	
 }

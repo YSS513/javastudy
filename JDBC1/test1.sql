@@ -288,7 +288,6 @@ insert into ohter values (4, '불고기피자', '토마토스파게티', '콜라')
 
 insert into ohter values (5, '불고기피자', '크림스파게티', '사이다')
 
-
 select * from member
 
 
