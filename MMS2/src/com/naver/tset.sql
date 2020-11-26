@@ -1,0 +1,4 @@
+DELETE FROM member
+COMMIT
+
+SELECT * FROM member
