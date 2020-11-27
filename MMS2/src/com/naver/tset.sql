@@ -1,4 +1,4 @@
 DELETE FROM member
 COMMIT
 
-SELECT * FROM member
+SELECT * FROM member10
